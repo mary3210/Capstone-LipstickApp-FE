@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../Home/Home';
 import Header from '../Header/Header';
+import Navbar from '../Navbar/Navbar';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route exact path='/' element={ <Home /> }/>
         </Routes>
         <Header/>
+        <Navbar/>
     </div>
   );
 }
