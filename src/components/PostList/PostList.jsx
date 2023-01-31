@@ -22,7 +22,11 @@ const PostList = () => {
   return (
     <>
       <h2>Posts in Lists</h2>
-      <ul>{posts && posts.map((post) => <div> <img alt={post.tage} src={post.image}/> {post.name} {post.rating} </div>)}</ul>
+      <ul>{posts && posts.map((post) => 
+      <div> 
+        <img alt={post.tage} src={post.image}/> 
+        <p>{post.name}</p>
+        <p>{post.rating}</p> </div>)}</ul>
     </>
   );
 };
