@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -23,7 +24,9 @@ const PostList = () => {
     <>
       <h2>Posts in Lists</h2>
       <ul>{posts && posts.map((post) => 
+      
       <div> 
+        <Link key={post._id} to={`/${post._id}`}></Link>
         <img alt={post.tage} src={post.image}/> 
         <p>{post.name}</p>
         <p>{post.rating}</p> </div>)}</ul>
