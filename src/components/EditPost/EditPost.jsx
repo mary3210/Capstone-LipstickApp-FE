@@ -12,12 +12,13 @@ const EditPost = (props) => {
         rating: 0,
         
     })
-    useEffect(() => { 
-        if(data) {setEditForm({image: data.image}, {name: data.image},
-            {review: data.review}, {tags: data.tags}, {rating: data.rating}
+    // useEffect(() => { 
+    //     if(data) {setEditForm({image: data.image}, {name: data.image},
+    //         {review: data.review}, {tags: data.tags}, {rating: data.rating}
 
-        )}
-    }
+    //     )}
+    // }
+
     const navigate = useNavigate()
     const { id } = useParams()
 
