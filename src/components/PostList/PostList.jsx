@@ -22,7 +22,7 @@ const PostList = () => {
   return (
     <>
       <h2>Posts in Lists</h2>
-      <ul>{posts && posts.map((post) => <li> {post.review} </li>)}</ul>
+      <ul>{posts && posts.map((post) => <div> <img alt={post.tage} src={post.image}/> {post.name} {post.rating} </div>)}</ul>
     </>
   );
 };
