@@ -23,13 +23,18 @@ const PostList = () => {
   return (
     <>
       <h2>Posts in Lists</h2>
-      <ul>{posts && posts.map((post) => 
-      
-      <div> 
-        <Link key={post._id} to={`/${post._id}`}></Link>
-        <img alt={post.tage} src={post.image}/> 
-        <p>{post.name}</p>
-        <p>{post.rating}</p> </div>)}</ul>
+      <ul>
+        {posts &&
+          posts.map((post) => (
+            <div>
+              <Link key={post._id} to={`/post/${post._id}`}>
+                <img alt={post.tage} src={post.image} />
+                <p>{post.name}</p>
+                <p>{post.rating}</p>
+              </Link>
+            </div>
+          ))}
+      </ul>
     </>
   );
 };

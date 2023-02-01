@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
+import { unmountComponentAtNode } from "react-dom"
 import {useParams, useNavigate, Navigate} from "react-router-dom"
 import PostList from "../PostList/PostList"
 
 const EditPost = (props) => {
+    const navigate = useNavigate()
+    const BASE_URL = 'http://localhost:8000'
+    const { id } = useParams()
     const { data } = props 
     const [editForm, setEditForm] = useState({
         image: "",
@@ -12,17 +16,24 @@ const EditPost = (props) => {
         rating: 0,
         
     })
-    // useEffect(() => { 
-    //     if(data) {setEditForm({image: data.image}, {name: data.image},
-    //         {review: data.review}, {tags: data.tags}, {rating: data.rating}
 
-    //     )}
-    // }
+    const getPost = async (id) => {
+        try {
+            const response = await fetch(BASE_URL + `/posts/${id}`)
+            const result = await response.json()
+            setEditForm(result)
 
-    const navigate = useNavigate()
-    const { id } = useParams()
+        } catch (err) {
+            console.error(err)
+        }
+    
+    }
+    useEffect(() => { 
+        console.log('abs ', data)
+        getPost(id)
+    },[id])
 
-    const URL = 'http://localhost:8000/{id}'
+   
     //double check if the url is correct
 
     const handleChange = (event) => {
@@ -32,25 +43,31 @@ const EditPost = (props) => {
     }
 
     const updatePost = async (e) => {
-        const createTags = (str) => {
-            let arr = str.split(',')
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i][0] === ' ') {
-                    arr[i] = arr[i].substring(1, arr[i].length)
-                }
-            }
-            return arr
-        }
+        // const createTags = (str) => {
+        //     let arr = str.split(',')
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i][0] === ' ') {
+        //             arr[i] = arr[i].substring(1, arr[i].length)
+        //         }
+        //     }
+        //     return arr
+        // }
         e.preventDefault()
-        editForm.tags = createTags(editForm.tags)
+        // editForm.tags = createTags(editForm.tags)
         const updatedPost = { ...editForm }
+        
+        console.log('kityy', updatedPost)
         try {
+            
             const requestOptions = {
                 method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
                 body: JSON.stringify(updatedPost),
             }
-            await fetch(URL, requestOptions)
-            Navigate('/')
+            await fetch(BASE_URL + `/posts/${id}`, requestOptions)
+            navigate(`/post/${id}`)
         }
         catch (err) {
             console.error(err)
@@ -63,8 +80,8 @@ const EditPost = (props) => {
             const options = {
                 method: "DELETE",
             }
-            const response = await fetch(URL, options)
-           Navigate('/')
+            const response = await fetch(BASE_URL + `/posts/${id}`, options)
+           navigate('/')
         } catch (err) {
             console.error(err)
         }
@@ -113,9 +130,10 @@ const EditPost = (props) => {
                 <div>
                     <label>
                         Rating
+                        <p>{editForm.rating}</p>
                     </label>
                 </div>
-                <input type="submit" value="Edit Post" />
+                <input type="submit" value="Save Post" />
                 </div>
             </form>
         </section>
