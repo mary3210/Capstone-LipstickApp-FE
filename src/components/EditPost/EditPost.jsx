@@ -104,8 +104,9 @@ const EditPost = (props) => {
             <form onSubmit={updatePost}>
                 <div>
                 <label>
+                    New Image: 
                     <input
-                        hidden={true}
+                        
                         type="url"
                         id="image"
                         name="image"
@@ -114,6 +115,19 @@ const EditPost = (props) => {
                         />
                 </label>
                 <br/>
+                <div> 
+                    <label>
+                        Edit Name:
+                        <input
+                        type="text"
+                        value={editForm.name}
+                        name="name"
+                        placeholder="edit name"
+                        onChange={handleChange}
+                        />
+                    </label>
+                </div>
+                <br />
                 <div> 
                     <label>
                         Edit Review:
@@ -129,7 +143,7 @@ const EditPost = (props) => {
                 <br />
                 <div>
                     <label>
-                        Rating
+                        Edit Rating:
                         <p>{editForm.rating}</p>
                     </label>
                 </div>
