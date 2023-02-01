@@ -36,10 +36,10 @@ const CreatePost = (props) => {
       setPostform([...posts, newPost]);
       setPostform({
         image: "",
-        description: "",
-        tags: "",
+        name: "",
         rating: "",
-        difficulty: "",
+        review: "",
+        tags: "",
       });
       navigate("/");
     } catch (err) {
@@ -54,10 +54,11 @@ const CreatePost = (props) => {
         <div className="create-post">
           <br />
           <form onSubmit={handleSubmit}>
-            <div>
+          <div>
               <label>
+                Image: 
                 <input
-                  hidden={true}
+                //   hidden={true}
                   type="url"
                   id="image"
                   name="image"
@@ -69,7 +70,21 @@ const CreatePost = (props) => {
             <br />
             <div>
               <label>
-                Description
+                Name:
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter a name"
+                  value={postForm.name}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <br />
+            <div>
+              <label>
+                Review:
                 <input
                   type="text"
                   id="review"
@@ -83,7 +98,7 @@ const CreatePost = (props) => {
             <br />
             <div>
               <label>
-                Tags
+                Tags:
                 <input
                   type="text"
                   id="tags"
@@ -100,7 +115,7 @@ const CreatePost = (props) => {
               <label>
                 Rating:
               <input
-                  type="text"
+                  type="number"
                   id="rating"
                   name="rating"
                   placeholder="rating"
