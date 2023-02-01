@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { unmountComponentAtNode } from "react-dom"
 import {useParams, useNavigate, Navigate} from "react-router-dom"
 import PostList from "../PostList/PostList"
+import HeartRating from "../HeartRating"
 
 const EditPost = (props) => {
     const navigate = useNavigate()
@@ -56,7 +57,7 @@ const EditPost = (props) => {
         // editForm.tags = createTags(editForm.tags)
         const updatedPost = { ...editForm }
         
-        console.log('kityy', updatedPost)
+        // console.log('kityy', updatedPost)
         try {
             
             const requestOptions = {
@@ -94,6 +95,13 @@ const EditPost = (props) => {
     //         return formCopy
     //     })
     // }
+    const setHeartRating = (newRating) => {
+        setEditForm((oldEditFormValues) => {
+            const copyOfEditForm = { ...oldEditFormValues }
+            copyOfEditForm.rating = newRating
+            return copyOfEditForm
+        })
+    }
 
     
     return(
@@ -144,6 +152,7 @@ const EditPost = (props) => {
                 <div>
                     <label>
                         Edit Rating:
+                        <HeartRating setRating={setHeartRating} />
                         <p>{editForm.rating}</p>
                     </label>
                 </div>

@@ -2,14 +2,14 @@ input[type="radio"] {
     display: none;
 }
 
-.stars {
+.hearts {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
 }
 
-.star {
+.heart {
     height: 100px;
     background-size: 100px;
     cursor: pointer;

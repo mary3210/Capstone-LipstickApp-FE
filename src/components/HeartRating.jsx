@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import { FaHeart } from "react-icons/fa"
+import "./HeartRating.css"
 
 const HeartRating = (props) => {
     const [values, setValues] = useState(null)
@@ -8,7 +9,7 @@ const HeartRating = (props) => {
     const setRating = props.setRating
 
     return (
-        <div className="heart">
+        <div className="hearts">
         {[...Array(5)].map((heart, index) => {
                 const heartValue = index + 1
                 return (
