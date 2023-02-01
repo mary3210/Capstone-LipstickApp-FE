@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 import EditPost from '../EditPost/EditPost';
 import PostDetail from '../PostDetail/PostDetail';
+import CreatePost from '../CreatePost/CreatePost';
 function App() {
   return (
     <div className="Container">
@@ -12,6 +13,7 @@ function App() {
         <Route exact path='/' element={ <Home /> }/>
         <Route exact path='/post/:id/edit' element= { <EditPost/>}/>
         <Route path="/post/:id" element={<PostDetail />} />
+        <Route path="/post" element={<CreatePost/>} />
         </Routes>
         <Header/>
         <Navbar/>
