@@ -7,6 +7,7 @@ import EditPost from '../EditPost/EditPost';
 import PostDetail from '../PostDetail/PostDetail';
 import CreatePost from '../CreatePost/CreatePost';
 import CollectionList from '../Collection/Collection';
+import ShowCollection from '../ShowCollection/ShowCollection'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/post/:id" element={<PostDetail />} />
         <Route path="/post" element={<CreatePost/>} />
         <Route path="/collection" element={<CollectionList/>} />
+        <Route path="/collection/:id" element={<ShowCollection/>} />
         </Routes>
         <Header/>
         <Navbar/>

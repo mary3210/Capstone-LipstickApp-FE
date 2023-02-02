@@ -1,37 +1,76 @@
-import {useState, useEffect} from 'react'
-import { useParams } from 'react-router'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 const PostDetail = (props) => {
-    const [post, setPost ] = useState(null)
-    const {id} = useParams()
-    const BASE_URL = 'http://localhost:8000/'
+  const [collection, setCollection] = useState([]);
+  const [post, setPost] = useState(null);
+  const { id } = useParams();
+  const BASE_URL = "http://localhost:8000/";
 
-    const getPost = async () => {
-        try {
-            const response = await fetch(BASE_URL + `posts/${id}`)
-            const result = await response.json()
-            
-            setPost(result)
+  const getPost = async () => {
+    try {
+      const response = await fetch(BASE_URL + `posts/${id}`);
+      const result = await response.json();
 
-        } catch (err) {
-            console.error(err)
-        }
+      setPost(result);
+    } catch (err) {
+      console.error(err);
     }
-    useEffect(() => {
-        getPost()
-    }, [])
+  };
 
-    return (
-        <div className="post-container">
-        <h1>Post detail page</h1>
-        <img src={post?.image} alt={post?.tags} />
-        <h4>{post?.name}</h4>
-        <h4>{post?.review}</h4>
-        {post?.rating}
-        <Link to="edit">Edit Post</Link>
-        </div>
-    )
-}
+  const getCollections = async () => {
+    try {
+      const response = await fetch(BASE_URL + "collection");
+      const allCollections = await response.json();
+      setCollection(allCollections);
+      console.log(allCollections);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-export default PostDetail
+  const add = async (collectionId) => { 
+    try {
+      let postId = id
+
+        const requestOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }
+        await fetch(BASE_URL + `collection/${collectionId}/${postId}`, requestOptions)
+    } catch (err) {
+        console.error(err);
+    }
+  }
+
+  useEffect(() => {
+    getPost();
+    getCollections();
+  }, []);
+
+  return (
+    <div className="post-container">
+      <h1>Post detail page</h1>
+      <img src={post?.image} alt={post?.tags} />
+      <h4>{post?.name}</h4>
+      <h4>{post?.review}</h4>
+      {post?.rating}
+      <Link to="edit">Edit Post</Link>
+      <p>
+        {collection?.map((collection) => {
+          return (
+            <p>
+              {" "}
+              {collection?.name} <span onClick={() => add(collection._id)}>Add</span>
+            </p>
+          );
+        })}
+      </p>
+    </div>
+  );
+};
+
+export default PostDetail;

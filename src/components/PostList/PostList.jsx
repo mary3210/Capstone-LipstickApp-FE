@@ -31,6 +31,8 @@ const PostList = () => {
                 <img alt={post.tage} src={post.image} />
                 <p>{post.name}</p>
                 <p>{post.rating}</p>
+                
+               
               </Link>
             </div>
           ))}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import HeartRating from "../HeartRating";
 
 const CreatePost = (props) => {
   const [posts, setPosts] = useState([]);
@@ -45,7 +46,16 @@ const CreatePost = (props) => {
     } catch (err) {
       console.error(err);
     }
-  };
+  }
+
+  const setHeartRating = (newRating) => {
+    setPostform((oldEditFormValues) => {
+        const copyOfEditForm = { ...oldEditFormValues }
+        copyOfEditForm.rating = newRating
+        return copyOfEditForm
+    })
+}
+
 
   return (
     <div>
@@ -114,6 +124,7 @@ const CreatePost = (props) => {
             <div>
               <label>
                 Rating:
+                <HeartRating setRating />
               <input
                   type="number"
                   id="rating"
