@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Navbar = () => {
     return (
         <nav className="nav">
             <Link to='/'>
+                <FontAwesomeIcon icon="fa-lips"/>
                 <p>Home</p>
             </Link>
             <Link to="/post/">
