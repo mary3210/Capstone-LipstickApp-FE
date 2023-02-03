@@ -8,8 +8,8 @@ const Header = () => {
         <div className="Header">
             <Link to="/about">
             
-           <FontAwesomeIcon icon={faWandMagicSparkles}></FontAwesomeIcon>
-                <h1>Perfect Lips</h1></Link>
+           
+                <h1><FontAwesomeIcon icon={faWandMagicSparkles}></FontAwesomeIcon> Perfect Lips</h1></Link>
         </div>
     )
 }

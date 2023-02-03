@@ -12,6 +12,7 @@ import ShowCollection from '../ShowCollection/ShowCollection'
 function App() {
   return (
     <div className="Container">
+      <Navbar/>
       <Routes>
         <Route exact path='/' element={ <Home /> }/>
         <Route exact path='/post/:id/edit' element= { <EditPost/>}/>
@@ -21,7 +22,7 @@ function App() {
         <Route path="/collection/:id" element={<ShowCollection/>} />
         </Routes>
         <Header/>
-        <Navbar/>
+        
     </div>
   );
 }
