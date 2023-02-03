@@ -124,7 +124,7 @@ const CreatePost = (props) => {
             <div>
               <label>
                 Rating:
-                <HeartRating setRating />
+                <HeartRating setRating={setHeartRating} />
               <input
                   type="number"
                   id="rating"
