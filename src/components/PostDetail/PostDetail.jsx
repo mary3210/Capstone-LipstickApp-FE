@@ -35,12 +35,12 @@ const PostDetail = (props) => {
       let postId = id
 
         const requestOptions = {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
         }
-        await fetch(BASE_URL + `collection/${collectionId}/${postId}`, requestOptions)
+        await fetch(BASE_URL + `collection/add/${collectionId}/${postId}`, requestOptions)
     } catch (err) {
         console.error(err);
     }
