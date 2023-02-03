@@ -29,7 +29,7 @@ const CollectionList = (props) => {
             <div>
               <Link to={`${collection._id}`}>
                 <h4>{collection?.name}</h4>
-                <p>{collection?._id}</p>
+               
               </Link>
             </div>
           ))}

@@ -64,7 +64,7 @@ const PostDetail = (props) => {
           return (
             <p>
               {" "}
-              {collection?.name} <span onClick={() => add(collection._id)}>Add</span>
+              {collection?.name} <button className="btnOne" onClick={() => add(collection._id)}>Add</button>
             </p>
           );
         })}

@@ -21,7 +21,7 @@ function App() {
         <Route path="/collection" element={<CollectionList/>} />
         <Route path="/collection/:id" element={<ShowCollection/>} />
         </Routes>
-        <Header/>
+        
         
     </div>
   );

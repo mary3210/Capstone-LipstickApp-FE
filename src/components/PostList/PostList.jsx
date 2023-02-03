@@ -26,7 +26,7 @@ const PostList = () => {
       <ul>
         {posts &&
           posts.map((post) => (
-            <div>
+            <div className="HomePosts">
               <Link key={post._id} to={`/post/${post._id}`}>
                 <img alt={post.tage} src={post.image} />
                 <p>{post.name}</p>

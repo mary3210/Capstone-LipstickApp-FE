@@ -65,6 +65,7 @@ const CreatePost = (props) => {
           <br />
           <form onSubmit={handleSubmit}>
           <div>
+          <h2>Create Lipstick Review</h2>
               <label>
                 Image: 
                 <input
@@ -79,6 +80,7 @@ const CreatePost = (props) => {
             </div>
             <br />
             <div>
+            
               <label>
                 Name:
                 <input
