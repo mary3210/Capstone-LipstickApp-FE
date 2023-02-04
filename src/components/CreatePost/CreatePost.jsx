@@ -128,6 +128,7 @@ const CreatePost = (props) => {
                 Rating:
                 <HeartRating setRating={setHeartRating} />
               <input
+              hidden={true}
                   type="number"
                   id="rating"
                   name="rating"

@@ -153,7 +153,7 @@ const EditPost = (props) => {
                     <label>
                         Edit Rating:
                         <HeartRating setRating={setHeartRating} />
-                        <p>{editForm.rating}</p>
+                       
                     </label>
                 </div>
                 <input type="submit" value="Save Post" />

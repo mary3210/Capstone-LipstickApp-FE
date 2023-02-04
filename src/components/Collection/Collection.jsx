@@ -22,7 +22,7 @@ const CollectionList = (props) => {
 
   return (
     <>
-      <h1>This is the collection page</h1>
+      
       <ul>
         {collection &&
           collection.map((collection) => (

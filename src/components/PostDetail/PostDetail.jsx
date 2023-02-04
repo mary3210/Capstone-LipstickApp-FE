@@ -53,7 +53,7 @@ const PostDetail = (props) => {
 
   return (
     <div className="postcontainer">
-      <h1>Post detail page</h1>
+     
       <img src={post?.image} alt={post?.tags} />
       <h4>{post?.name}</h4>
       <h4>{post?.review}</h4>
