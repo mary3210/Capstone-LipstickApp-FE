@@ -26,7 +26,7 @@ const CollectionList = (props) => {
       <ul>
         {collection &&
           collection.map((collection) => (
-            <div>
+            <div className="collection">
               <Link to={`${collection._id}`}>
                 <h4>{collection?.name}</h4>
                

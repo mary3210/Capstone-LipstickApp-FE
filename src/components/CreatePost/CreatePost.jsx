@@ -61,7 +61,7 @@ const CreatePost = (props) => {
     <div>
       <section>
         <h2>Create New Post</h2>
-        <div className="create-post">
+        <div className="createpost">
           <br />
           <form onSubmit={handleSubmit}>
           <div>

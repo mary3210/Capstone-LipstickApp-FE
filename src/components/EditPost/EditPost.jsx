@@ -107,7 +107,7 @@ const EditPost = (props) => {
     return(
         <>
         <br />
-        <section  className="edit-post">
+        <section  className="editpost">
             <h2>Edit Post</h2>
             <form onSubmit={updatePost}>
                 <div>
@@ -157,13 +157,11 @@ const EditPost = (props) => {
                     </label>
                 </div>
                 <input type="submit" value="Save Post" />
+                <button classname= "delete-button" onClick={deletePost}>Delete</button>
                 </div>
             </form>
         </section>
-        <section className="delete-post">
-            <h2>Delete Post</h2>
-            <button classname= "delete-button" onClick={deletePost}>Delete</button>
-         </section>
+       
         </>
     )
    
