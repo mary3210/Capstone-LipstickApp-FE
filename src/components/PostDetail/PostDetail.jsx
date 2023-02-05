@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-
+import HeartRating from "../HeartRating";
 const PostDetail = (props) => {
   const [collection, setCollection] = useState([]);
   const [post, setPost] = useState(null);
@@ -46,6 +46,22 @@ const PostDetail = (props) => {
     }
   }
 
+  const remove = async (collectionId) => { 
+    try {
+      let postId = id
+
+        const requestOptions = {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }
+        await fetch(BASE_URL + `collection/delete/${collectionId}/${postId}`, requestOptions)
+    } catch (err) {
+        console.error(err);
+    }
+  }
+
   useEffect(() => {
     getPost();
     getCollections();
@@ -57,7 +73,9 @@ const PostDetail = (props) => {
       <img src={post?.image} alt={post?.tags} />
       <h4>{post?.name}</h4>
       <h4>{post?.review}</h4>
-      {post?.rating}
+      <div>
+      <HeartRating fixedRating={post?.rating} setRating={()=>{}}/>
+      </div>
       <Link to="edit">Edit Post</Link>
       <p>
         {collection?.map((collection) => {
@@ -65,6 +83,7 @@ const PostDetail = (props) => {
             <p>
               {" "}
               {collection?.name} <button className="btnOne" onClick={() => add(collection._id)}>Add</button>
+              <button onClick={() => remove(collection._id)}>Remove</button>
             </p>
           );
         })}

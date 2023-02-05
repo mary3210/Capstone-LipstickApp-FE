@@ -32,7 +32,7 @@ const CreatePost = (props) => {
         },
         body: JSON.stringify(currentState),
       };
-      const response = await fetch(BASE_URL + 'posts', requestOptions);
+      const response = await fetch(BASE_URL + "posts", requestOptions);
       const newPost = await response.json();
       setPostform([...posts, newPost]);
       setPostform({
@@ -46,16 +46,15 @@ const CreatePost = (props) => {
     } catch (err) {
       console.error(err);
     }
-  }
+  };
 
   const setHeartRating = (newRating) => {
     setPostform((oldEditFormValues) => {
-        const copyOfEditForm = { ...oldEditFormValues }
-        copyOfEditForm.rating = newRating
-        return copyOfEditForm
-    })
-}
-
+      const copyOfEditForm = { ...oldEditFormValues };
+      copyOfEditForm.rating = newRating;
+      return copyOfEditForm;
+    });
+  };
 
   return (
     <div>
@@ -64,12 +63,12 @@ const CreatePost = (props) => {
         <div className="createpost">
           <br />
           <form onSubmit={handleSubmit}>
-          <div>
-          <h2>Create Lipstick Review</h2>
+            <div>
+              <h2>Create Lipstick Review</h2>
               <label>
-                Image: 
+                Image:
                 <input
-                //   hidden={true}
+                  //   hidden={true}
                   type="url"
                   id="image"
                   name="image"
@@ -80,7 +79,6 @@ const CreatePost = (props) => {
             </div>
             <br />
             <div>
-            
               <label>
                 Name:
                 <input
@@ -127,8 +125,8 @@ const CreatePost = (props) => {
               <label>
                 Rating:
                 <HeartRating setRating={setHeartRating} />
-              <input
-              hidden={true}
+                <input
+                  hidden={true}
                   type="number"
                   id="rating"
                   name="rating"

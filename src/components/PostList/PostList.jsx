@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import HeartRating from "../HeartRating";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -30,6 +31,7 @@ const PostList = () => {
               <Link key={post._id} to={`/post/${post._id}`}>
                 <img alt={post.tage} src={post.image} />
                 <p>{post.name}</p>
+                <HeartRating fixedRating={post.rating} setRating={()=>{}}/>
                 <p>{post.rating}</p>
                 
                

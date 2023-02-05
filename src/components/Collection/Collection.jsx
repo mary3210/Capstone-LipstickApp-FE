@@ -22,14 +22,12 @@ const CollectionList = (props) => {
 
   return (
     <>
-      
       <ul>
         {collection &&
           collection.map((collection) => (
             <div className="collection">
               <Link to={`${collection._id}`}>
                 <h4>{collection?.name}</h4>
-               
               </Link>
             </div>
           ))}
