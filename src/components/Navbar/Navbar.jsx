@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <div className="Header">
-        <Link to="/about">
+        <Link to="/">
           <h1>
             <FontAwesomeIcon icon={faWandMagicSparkles}></FontAwesomeIcon>{" "}
             Perfect Lips

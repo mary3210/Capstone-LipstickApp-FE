@@ -5,7 +5,7 @@ import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   return (
     <div className="Header">
-      <Link to="/about">
+      <Link to="/">
         <h1>
           <FontAwesomeIcon icon={faWandMagicSparkles}></FontAwesomeIcon> Perfect
           Lips

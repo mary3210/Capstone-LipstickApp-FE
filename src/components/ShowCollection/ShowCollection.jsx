@@ -22,8 +22,8 @@ const ShowCollection = (props) => {
   }, []);
 
   return (
-    <div>
-      <h1>Collection Show Page</h1>
+    <div className="showpage">
+      <h1>Collection List</h1>
       {ShowCollection &&
         ShowCollection.posts.map((post) => (
           <div>

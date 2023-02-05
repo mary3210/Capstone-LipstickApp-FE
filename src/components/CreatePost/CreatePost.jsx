@@ -68,8 +68,8 @@ const CreatePost = (props) => {
               <label>
                 Image:
                 <input
-                  //   hidden={true}
                   type="url"
+                  placeholder="url"
                   id="image"
                   name="image"
                   value={postForm.image}
@@ -106,21 +106,6 @@ const CreatePost = (props) => {
               </label>
             </div>
             <br />
-            <div>
-              <label>
-                Tags:
-                <input
-                  type="text"
-                  id="tags"
-                  name="tags"
-                  placeholder="separated by commas"
-                  value={postForm.tags}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
-            <br />
-
             <div>
               <label>
                 Rating:
