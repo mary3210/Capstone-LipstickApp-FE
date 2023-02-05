@@ -69,13 +69,6 @@ const EditPost = (props) => {
     }
   };
 
-  // const setImage = (newImage) => {
-  //     setEditForm((oldPostForm) => {
-  //         const formCopy = { ...oldPostForm }
-  //         formCopy.image = newImage
-  //         return formCopy
-  //     })
-  // }
   const setHeartRating = (newRating) => {
     setEditForm((oldEditFormValues) => {
       const copyOfEditForm = { ...oldEditFormValues };
@@ -134,8 +127,8 @@ const EditPost = (props) => {
                 <HeartRating setRating={setHeartRating} />
               </label>
             </div>
-            <input type="submit" value="Save Post" />
-            <button classname="delete-button" onClick={deletePost}>
+            <input className="savePost" type="submit" value="Save Post" />
+            <button className="delete-button" onClick={deletePost}>
               Delete
             </button>
           </div>

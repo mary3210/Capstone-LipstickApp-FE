@@ -83,7 +83,7 @@ const PostDetail = (props) => {
             <p>
               {" "}
               {collection?.name} <button className="btnOne" onClick={() => add(collection._id)}>Add</button>
-              <button onClick={() => remove(collection._id)}>Remove</button>
+              <button className="btnTwo" onClick={() => remove(collection._id)}>Remove</button>
             </p>
           );
         })}

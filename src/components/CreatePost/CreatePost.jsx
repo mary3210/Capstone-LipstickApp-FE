@@ -135,7 +135,7 @@ const CreatePost = (props) => {
                   onChange={handleChange}
                 />
               </label>
-              <input type="submit" value="Post" />
+              <input className="postBtn" type="submit" value="Post" />
             </div>
           </form>
         </div>
