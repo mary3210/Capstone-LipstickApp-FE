@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Project Links: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* [Frontend](https://main--reliable-fenglisu-0c642b.netlify.app/)
+* [Backend](https://murmuring-lowlands-71026.herokuapp.com/)
 
-## Available Scripts
 
-In the project directory, you can run:
+# Project Description:
 
-### `npm start`
+Perfect Lips is a platform where it brings lipstick connoisseurs together to talk about their most favorite subject. Fellow lipstick fans can leave reviews for various
+lipsticks from any brand and can collect information from multiple users about what's worth being in their makeup collection. Once a user finds a post they deem as collection worthy, they have the option to store this post in a collection on the collection page. A post can find itself in two different collections, which are favorites or wishlist. This app is the perfect place to show off your review of lipstick products and to gain intel before walking into a store clueless about what lipstick product might be best for you. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React.js
+* Node.js
+* Mongoose.js
+* Express.js
+* MongoDB
+* JSX
+* HTML
+* CSS
 
-### `npm test`
+# Installation Instructions:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Fork and clone this repository.
+2. Change into the new directory.
+3. Install dependencies (npm i or npm install).
+4. Open up your app in VS Code 
+5. Run npm start to start your local server
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# User Story: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Viewing the homepage: 
+The Home page is the first page to load for the user. The home page contains a preview of a list of posts that contain an image, name of product and rating. The user is able to hover over each post. On the home page, the user can view the navbar, which contains the home icon, create post, and a view my collection item.
+If the user clicks on any of the posts listed on home page, they open to a more detailed page about that single post.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When the user clicks create post:
+A page loads a form where they can input data such as: image, text, tags, and a heart rating from 1-5.
+Underneath the input field the user can then press submit and be lead to a page where their post is displayed.
 
-### `npm run eject`
+When the user clicks on a my collection:
+A page will load a list of collections. The user can click on a collection and view all posts they added to that collection.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Wireframe:
+![Wireframe](lipstick.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# ERD
+![ERD](ERD.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Future Upgrades:
+* Ability to upload images with cloudinary
+* User authentication
+* User accounts
+* Filtering system for review posts
