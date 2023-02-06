@@ -28,8 +28,6 @@ lipsticks from any brand and can collect information from multiple users about w
 4. Open up your app in VS Code 
 5. Run npm start to start your local server
 
-<br>
-
 # User Story: 
 
 Viewing the homepage: 
