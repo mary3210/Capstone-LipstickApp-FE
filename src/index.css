@@ -28,7 +28,19 @@
 
 .nav p {
   display: inline-block;
-  text-decoration: none;
+  
+}
+
+.nav p:hover {
+  color:white;
+}
+
+.nav h1 {
+  display: inline-block;
+}
+
+.nav h1:hover {
+  color:white;
 }
 
 .showpage {
