@@ -30,7 +30,9 @@ const PostList = () => {
             <div className="HomePosts">
               <Link key={post._id} to={`/post/${post._id}`}>
                 <img alt={post.tage} src={post.image} />
+                <div className="ptags">
                 <p>{post.name}</p>
+                </div>
                 <HeartRating fixedRating={post.rating} setRating={() => {}} />
               </Link>
             </div>
