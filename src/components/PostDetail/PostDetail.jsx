@@ -82,8 +82,8 @@ const PostDetail = (props) => {
           return (
             <p>
               {" "}
-              {collection?.name} <button className="btnOne" onClick={() => add(collection._id)}>Add</button>
-              <button className="btnTwo" onClick={() => remove(collection._id)}>Remove</button>
+              {collection?.name} <button className="btn btnOne" onClick={() => add(collection._id)}>Add</button>
+              <button className="btn btnTwo" onClick={() => remove(collection._id)}>Remove</button>
             </p>
           );
         })}
