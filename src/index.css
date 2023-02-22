@@ -21,7 +21,8 @@
   justify-content: center;
 }
 .HomePosts p{
-  display:inline-block
+  display:inline-block;
+  color: #FF78D2;
 }
 .nav {
   display: flex;
