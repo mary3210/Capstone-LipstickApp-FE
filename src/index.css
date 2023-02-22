@@ -168,6 +168,13 @@ img {
  cursor:grab;
 }
 
+.delete-button:hover {
+  border: 1px solid;
+  letter-spacing: 2px;
+  transition: letter-spacing 1s;
+  transition-timing-function: ease-in;
+}
+
 .createpost {
   display: flex;
   flex-direction: column;
