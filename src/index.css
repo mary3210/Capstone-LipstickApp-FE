@@ -208,6 +208,10 @@ img {
   transition-timing-function: ease-in;
 }
 
+.editpost h2 {
+  margin-top: 100px;
+}
+
 .postcontainer {
   display: flex;
   flex-direction: column;
