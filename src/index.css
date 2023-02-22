@@ -55,6 +55,7 @@ img {
 
 .nav p:hover {
   color:white;
+  text-decoration: underline;
 }
 
 .nav h1 {
