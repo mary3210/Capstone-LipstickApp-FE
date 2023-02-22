@@ -121,6 +121,27 @@ img {
   background-color: red;
   height: 25px;
   border-radius: 10%;
+  border: 0 solid;
+  text-transform: uppercase;
+  border-radius: 5px;
+ color:white;
+ font-weight: bold;
+ padding:10px;
+ width:100px;
+ text-align: center;
+ font-size: 18px;
+ height: 50px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ letter-spacing: 1px;
+ font-family: 'Gruppo', cursive;
+ cursor:grab;
+}
+
+.btnTwo:Hover {
+  border: 1px solid;
+  letter-spacing: 2px;
+  transition: letter-spacing 1s;
+  transition-timing-function: ease-in;
 }
 
 .delete-button {
