@@ -42,6 +42,7 @@ img {
     position: fixed;
     top: 0px;
     text-decoration: none;
+    background-image: linear-gradient(to bottom right, pink, #FF78D2);
 }
 
 .nav p {
@@ -90,6 +91,8 @@ img {
 .collectName {
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
+
 }
 .btnOne {
   background-color: #FF78D2;
