@@ -47,6 +47,7 @@ img {
 .nav p {
   display: inline-block;
   font-family: 'Gruppo', cursive;
+  color:black;
   
 }
 
@@ -56,6 +57,7 @@ img {
 
 .nav h1 {
   display: inline-block;
+  color:black
 }
 
 .nav h1:hover {
