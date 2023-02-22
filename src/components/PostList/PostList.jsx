@@ -29,7 +29,9 @@ const PostList = () => {
           posts.map((post) => (
             <div className="HomePosts">
               <Link key={post._id} to={`/post/${post._id}`}>
+                <div className="images">
                 <img alt={post.tage} src={post.image} />
+                </div>
                 <div className="ptags">
                 <p>{post.name}</p>
                 </div>
