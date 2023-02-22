@@ -35,7 +35,9 @@ const PostList = () => {
                 <div className="ptags">
                 <p>{post.name}</p>
                 </div>
+                <div className="HeartPost">
                 <HeartRating fixedRating={post.rating} setRating={() => {}} />
+                </div>
               </Link>
             </div>
           ))}
