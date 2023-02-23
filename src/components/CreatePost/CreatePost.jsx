@@ -92,17 +92,18 @@ const CreatePost = (props) => {
               </label>
             </div>
             <br />
-            <div>
+            <div className="reviewtxt">
               <label>
                 Review:
-                <input
+                <textarea
                   type="text"
                   id="review"
                   name="review"
                   placeholder="Enter review"
                   value={postForm.review}
                   onChange={handleChange}
-                />
+                >
+                  </textarea>
               </label>
             </div>
             <br />

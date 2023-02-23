@@ -108,7 +108,7 @@ const EditPost = (props) => {
               </label>
             </div>
             <br />
-            <div>
+            <div className="reviewtxt">
               <label>
                 Edit Review:
                 <input
