@@ -88,6 +88,14 @@ img {
   border-radius: 10%;
 
 }
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 .collectName {
   display: flex;
   justify-content: center;
