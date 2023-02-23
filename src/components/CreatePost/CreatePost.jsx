@@ -120,7 +120,9 @@ const CreatePost = (props) => {
                   onChange={handleChange}
                 />
               </label>
+              <div className="btn postbtn1">
               <input className="postBtn" type="submit" value="Post" />
+              </div>
             </div>
           </form>
         </div>
