@@ -111,13 +111,14 @@ const EditPost = (props) => {
             <div className="reviewtxt">
               <label>
                 Edit Review:
-                <input
+                <textarea
                   type="text"
                   value={editForm.review}
                   name="review"
                   placeholder="edit review"
                   onChange={handleChange}
-                />
+                >
+                </textarea>
               </label>
             </div>
             <br />
