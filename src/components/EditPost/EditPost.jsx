@@ -19,7 +19,7 @@ const EditPost = (props) => {
 
   const getPost = async (id) => {
     try {
-      const response = await fetch(BASE_URL + `/posts/${id}`);
+      const response = await fetch(BASE_URL + `/post/${id}`);
       const result = await response.json();
       setEditForm(result);
     } catch (err) {
