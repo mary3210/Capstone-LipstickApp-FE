@@ -83,7 +83,7 @@ const EditPost = (props) => {
       <section className="editpost">
         <h2>Edit Post</h2>
         <form onSubmit={updatePost}>
-          <div>
+          <div className="imageinput">
             <label>
               New Image:
               <input
