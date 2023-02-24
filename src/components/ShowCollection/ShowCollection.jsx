@@ -8,7 +8,7 @@ const ShowCollection = (props) => {
 
   const getCollection = async () => {
     try {
-      const response = await fetch(BASE_URL + `collection/${id}`);
+      const response = await fetch(BASE_URL + `/collection/${id}`);
       const result = await response.json();
 
       setShowCollection(result);

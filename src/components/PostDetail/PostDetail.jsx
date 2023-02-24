@@ -21,7 +21,7 @@ const PostDetail = (props) => {
 
   const getCollections = async () => {
     try {
-      const response = await fetch(BASE_URL + "collection");
+      const response = await fetch(BASE_URL + "/collection");
       const allCollections = await response.json();
       setCollection(allCollections);
       console.log(allCollections);
