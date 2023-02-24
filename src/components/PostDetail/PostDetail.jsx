@@ -6,7 +6,7 @@ const PostDetail = (props) => {
   const [collection, setCollection] = useState([]);
   const [post, setPost] = useState(null);
   const { id } = useParams();
-  const BASE_URL = "https://murmuring-lowlands-71026.herokuapp.com";
+  const BASE_URL = "https://murmuring-lowlands-71026.herokuapp.com/";
 
   const getPost = async () => {
     try {
@@ -21,7 +21,7 @@ const PostDetail = (props) => {
 
   const getCollections = async () => {
     try {
-      const response = await fetch(BASE_URL + "/collection");
+      const response = await fetch(BASE_URL + "collection");
       const allCollections = await response.json();
       setCollection(allCollections);
       console.log(allCollections);
