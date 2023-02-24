@@ -6,7 +6,7 @@ import HeartRating from "../HeartRating";
 
 const EditPost = (props) => {
   const navigate = useNavigate();
-  const BASE_URL = "http://localhost:8000";
+  const BASE_URL = "https://murmuring-lowlands-71026.herokuapp.com";
   const { id } = useParams();
   const { data } = props;
   const [editForm, setEditForm] = useState({

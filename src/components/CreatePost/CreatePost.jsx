@@ -13,7 +13,7 @@ const CreatePost = (props) => {
     tags: "",
   });
 
-  const BASE_URL = "http://localhost:8000/";
+  const BASE_URL = "https://murmuring-lowlands-71026.herokuapp.com";
 
   const handleChange = (e) => {
     const userInput = { ...postForm };

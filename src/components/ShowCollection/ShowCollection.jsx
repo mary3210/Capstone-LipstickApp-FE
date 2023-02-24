@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 const ShowCollection = (props) => {
   const [ShowCollection, setShowCollection] = useState(null);
   const { id } = useParams();
-  const BASE_URL = "http://localhost:8000/";
+  const BASE_URL = "https://murmuring-lowlands-71026.herokuapp.com";
 
   const getCollection = async () => {
     try {
