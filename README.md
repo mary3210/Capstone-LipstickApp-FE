@@ -1,6 +1,6 @@
 # Project Links: 
 
-* [Frontend](https://main--reliable-fenglisu-0c642b.netlify.app/)
+* [Frontend](https://lipstickcollector.netlify.app/)
 * [Backend](https://lipstickcapstone-ad5aff4af392.herokuapp.com/)
 
 
