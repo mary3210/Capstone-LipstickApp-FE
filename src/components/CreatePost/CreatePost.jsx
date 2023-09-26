@@ -13,7 +13,7 @@ const CreatePost = (props) => {
     tags: "",
   });
 
-  const BASE_URL = "https://murmuring-lowlands-71026.herokuapp.com";
+  const BASE_URL = "https://lipstickcapstone-ad5aff4af392.herokuapp.com/";
 
   const handleChange = (e) => {
     const userInput = { ...postForm };

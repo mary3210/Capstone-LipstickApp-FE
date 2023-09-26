@@ -6,7 +6,7 @@ const PostDetail = (props) => {
   const [collection, setCollection] = useState([]);
   const [post, setPost] = useState(null);
   const { id } = useParams();
-  const BASE_URL = "https://murmuring-lowlands-71026.herokuapp.com/";
+  const BASE_URL = "https://lipstickcapstone-ad5aff4af392.herokuapp.com/";
 
   const getPost = async () => {
     try {
