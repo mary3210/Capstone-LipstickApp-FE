@@ -1,7 +1,7 @@
 # Project Links: 
 
 * [Frontend](https://main--reliable-fenglisu-0c642b.netlify.app/)
-* [Backend](https://murmuring-lowlands-71026.herokuapp.com/)
+* [Backend](https://lipstickcapstone-ad5aff4af392.herokuapp.com/)
 
 
 # Project Description:
