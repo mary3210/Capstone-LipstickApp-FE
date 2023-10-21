@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { unmountComponentAtNode } from "react-dom";
 import { useParams, useNavigate, Navigate } from "react-router-dom";
-import PostList from "../PostList/PostList";
-import HeartRating from "../HeartRating";
+import PostList from "./PostList";
+import HeartRating from "./HeartRating";
 
 const EditPost = (props) => {
   const navigate = useNavigate();
@@ -117,8 +117,7 @@ const EditPost = (props) => {
                   name="review"
                   placeholder="edit review"
                   onChange={handleChange}
-                >
-                </textarea>
+                ></textarea>
               </label>
             </div>
             <br />

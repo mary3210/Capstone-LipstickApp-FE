@@ -44,9 +44,6 @@ A page will load a list of collections. The user can click on a collection and v
 # Wireframe:
 ![Wireframe](lipstick.png)
 
-# ERD
-![ERD](ERD.png)
-
 # Future Upgrades:
 * Ability to upload images with cloudinary
 * User authentication

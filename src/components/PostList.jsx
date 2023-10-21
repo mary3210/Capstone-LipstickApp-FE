@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import HeartRating from "../HeartRating";
+import HeartRating from "./HeartRating";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -30,13 +30,13 @@ const PostList = () => {
             <div className="HomePosts">
               <Link key={post._id} to={`/post/${post._id}`}>
                 <div className="images">
-                <img alt={post.tage} src={post.image} />
+                  <img alt={post.tage} src={post.image} />
                 </div>
                 <div className="ptags">
-                <p>{post.name}</p>
+                  <p>{post.name}</p>
                 </div>
                 <div className="HeartPost">
-                <HeartRating fixedRating={post.rating} setRating={() => {}} />
+                  <HeartRating fixedRating={post.rating} setRating={() => {}} />
                 </div>
               </Link>
             </div>

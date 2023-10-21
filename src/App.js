@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../Home/Home";
-import Header from "../Header/Header";
-import Navbar from "../Navbar/Navbar";
-import EditPost from "../EditPost/EditPost";
-import PostDetail from "../PostDetail/PostDetail";
-import CreatePost from "../CreatePost/CreatePost";
-import CollectionList from "../Collection/Collection";
-import ShowCollection from "../ShowCollection/ShowCollection";
+import Home from "./views/Home";
+import Header from "./views/Header";
+import Navbar from "./views/Navbar";
+import EditPost from "./components/EditPost";
+import PostDetail from "./components/PostDetail";
+import CreatePost from "./components/CreatePost";
+import CollectionList from "./components/Collection";
+import ShowCollection from "./components/ShowCollection";
 
 function App() {
   return (

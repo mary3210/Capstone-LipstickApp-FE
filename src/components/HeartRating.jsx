@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
-import "./HeartRating.css";
+import "../styles/HeartRating.css";
 
 const HeartRating = (props) => {
   const [values, setValues] = useState(null);

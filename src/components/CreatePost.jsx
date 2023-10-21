@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HeartRating from "../HeartRating";
+import HeartRating from "./HeartRating";
 
 const CreatePost = (props) => {
   const [posts, setPosts] = useState([]);
@@ -66,17 +66,17 @@ const CreatePost = (props) => {
             <div>
               <h2>Create Lipstick Review</h2>
               <div className="imageinput">
-              <label>
-                Image:
-                <input
-                  type="url"
-                  placeholder="url"
-                  id="image"
-                  name="image"
-                  value={postForm.image}
-                  onChange={handleChange}
-                />
-              </label>
+                <label>
+                  Image:
+                  <input
+                    type="url"
+                    placeholder="url"
+                    id="image"
+                    name="image"
+                    value={postForm.image}
+                    onChange={handleChange}
+                  />
+                </label>
               </div>
             </div>
             <br />
@@ -104,8 +104,7 @@ const CreatePost = (props) => {
                   placeholder="Enter review"
                   value={postForm.review}
                   onChange={handleChange}
-                >
-                  </textarea>
+                ></textarea>
               </label>
             </div>
             <br />
@@ -124,7 +123,7 @@ const CreatePost = (props) => {
                 />
               </label>
               <div className="btn postbtn1">
-              <input className="postBtn" type="submit" value="Post" />
+                <input className="postBtn" type="submit" value="Post" />
               </div>
             </div>
           </form>
