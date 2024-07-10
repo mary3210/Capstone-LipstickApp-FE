@@ -6,7 +6,7 @@ import HeartRating from "./HeartRating";
 
 const EditPost = (props) => {
   const navigate = useNavigate();
-  const BASE_URL = "https://lipstickcapstone-ad5aff4af392.herokuapp.com/";
+  const BASE_URL = "https://lipstickcapstone-ad5aff4af392.herokuapp.com";
   const { id } = useParams();
   const { data } = props;
   const [editForm, setEditForm] = useState({
@@ -33,7 +33,9 @@ const EditPost = (props) => {
 
   const handleChange = (event) => {
     const userInput = { ...editForm };
+    console.log(userInput)
     userInput[event.target.name] = event.target.value;
+    debugger;
     setEditForm(userInput);
   };
 

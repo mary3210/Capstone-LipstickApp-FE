@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
+
+/* Home page */
+body {
+  display: flex;
+  width: 100vw;
+  margin: 0;
+}
+
 .HomePosts{
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-
-
+  width: 400px;
+  height: 600px;
+  border: rgba(238, 16, 190, 0.897) solid;
+  margin: 50px 
 }
 
 .HomePosts:hover {
@@ -21,6 +30,7 @@
   justify-content: center;
   height: 250px;
   width: 200px;
+ 
 }
 
 img {
@@ -31,6 +41,8 @@ img {
   display:inline-block;
   color: #FF78D2;
 }
+
+/* Navbar page */
 .nav {
   display: flex;
     justify-content: space-evenly;
