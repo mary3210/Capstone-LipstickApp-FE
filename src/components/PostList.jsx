@@ -23,7 +23,7 @@ const PostList = () => {
 
   return (
     <>
-      <h2>Posts in Lists</h2>
+      <div className="homeLipContainer">
       <ul>
         {posts &&
           posts.map((post) => (
@@ -42,6 +42,7 @@ const PostList = () => {
             </div>
           ))}
       </ul>
+      </div>
     </>
   );
 };

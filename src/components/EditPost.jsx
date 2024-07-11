@@ -35,7 +35,6 @@ const EditPost = (props) => {
     const userInput = { ...editForm };
     console.log(userInput)
     userInput[event.target.name] = event.target.value;
-    debugger;
     setEditForm(userInput);
   };
 
